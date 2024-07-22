@@ -1,5 +1,6 @@
 {
   "name": "UI_ExpenseTransferAttended",
+  "projectId": "da010af6-5c90-4129-a2ee-b7ebdaed0c03",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -7,6 +8,7 @@
     "UiPath.Form.Activities": "[1.1.10]",
     "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.3]",
+    "UiPath.Testing.Activities": "[24.10.1]",
     "UiPath.UIAutomation.Activities": "[20.10.8]"
   },
   "webServices": [],
@@ -16,16 +18,21 @@
   "projectVersion": "1.0.6",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -37,8 +44,15 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
-    "modernBehavior": true
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "785b1602-d76f-42f6-98b5-e0ecb8f5bc67",
+        "testCaseType": "TestCase",
+        "fileName": "UIEA_ExpenseApp.xaml"
+      }
+    ],
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
@@ -51,5 +65,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

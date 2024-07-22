@@ -1,4 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1160.8,5014.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dtExpenses" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_testCase" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_output" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.in_output>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_output>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2029,5434</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="43">
       <x:String>System.Activities</x:String>
@@ -47,61 +60,60 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="912.8,4949.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="2039,5409" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtExpenses" />
-      <Variable x:TypeArguments="x:String" Name="sFileName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">app\Expenses_short.xlsx</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="app\Expenses_short.xlsx" Name="sFileName" />
       <Variable x:TypeArguments="x:Double" Default="500" Name="dLimit" />
-      <Variable x:TypeArguments="x:String" Default="500" Name="output" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="871.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="1977,61" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[sFileName]</OutArgument>
       </Assign.To>
@@ -109,45 +121,65 @@
         <InArgument x:TypeArguments="x:String">app\Expenses.xlsx</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="871.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What is the limit for expenses?" Title="Limit">
-      <ui:InputDialog.Result>
-        <OutArgument x:TypeArguments="x:String">[output]</OutArgument>
-      </ui:InputDialog.Result>
-    </ui:InputDialog>
-    <Assign sap:VirtualizedContainerService.HintSize="871.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <If Condition="[in_testCase]" sap:VirtualizedContainerService.HintSize="1977,509" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="966,103" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="966,350" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="904,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What is the limit for expenses?" Title="Limit">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[in_output]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Assign sap:VirtualizedContainerService.HintSize="1977,61" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Double">[dLimit]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Double">[Double.Parse(output)]</InArgument>
+        <InArgument x:TypeArguments="x:Double">[Double.Parse(in_output)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ReadRange AddHeaders="True" DataTable="[dtExpenses]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="871.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[sFileName]">
+    <ui:ReadRange AddHeaders="True" DataTable="[dtExpenses]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1977,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[sFileName]">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Expenses Input" sap:VirtualizedContainerService.HintSize="871.2,4247.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Expenses Input" sap:VirtualizedContainerService.HintSize="1977,4419" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="837.6,3956" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="756,4129" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtExpenses]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="796,3861.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtExpenses]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="694,4014" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="746.4,3711.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="644,3864" sap2010:WorkflowViewState.IdRef="Sequence_1">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="selectedButton" />
                       <Variable x:TypeArguments="x:String" Name="formOutput" />
@@ -157,7 +189,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Employee #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[row(&quot;EmployeeNum&quot;).ToString]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Employee #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[row(&quot;EmployeeNum&quot;).ToString]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="126, 76, 411, 25" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_EmployeeNum' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_EmployeeNum' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZ8AAAAdCAYAAAB17WHzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEJSURBVHhe7dU7isIAFEDR2XoIxBTpspo0bkAhKIKNRQgGBfG3gjfdyDBMl7zqHLhruF+v1yskScrMfCRJ6f3M536/x+VykSRpsa7Xazyfz898drtd1HUtSdJitW0b0zR95rPdbqMsy9hsNnE4HCRJmrWu66Kqqjifz7/ns1qt4v1+BwDM7Xg8mg8AucwHgHTmA0A68wEgnfkAkM58AEhnPgCkMx8A0pkPAOnMB4B05gNAOvMBIJ35AJDOfABIZz4ApDMfANKZDwDpzAeAdOYDQDrzASDdv/MpyzL2+32cTidJkmZtvV7/nU/f91EUhSRJi9U0TUzT9JnP7XaLYRgkSVqscRzj8XjENyGgPcdrciSLAAAAAElFTkSuQmCC" InformativeScreenshot="955d6a619fedede3f3af06b57c63a506.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -168,14 +200,14 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Lookup'" sap:VirtualizedContainerService.HintSize="704.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Lookup'" sap:VirtualizedContainerService.HintSize="582,167" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="126, 174, 94, 29" ElementType="Button" FriendlyName="'Lookup'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='btnLookup' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='btnLookup' check:text='Lookup' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAAiaX7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATHSURBVGhD7ZrtT1NXHID3R/ht28ctxg+amEy3T1pBDcaXiahUtIhv6ApYKqEgtA3zheF8AVSMiFOLKIhF2iJxYTigdWhxlEKharEv0S8mJvIfPDulEItefEmovcnuhye3Ped37u/e87Tnd3NzvpqYmEAh+SgiZIIiQibMEPHmzRtevHhBJBJR+AK8fv1aWsSrV6/o6Oigra1NIcFYrVbGx8c/LGJgYAC/36+QIEZGRrDZbB8X4fV6Jf9KCnNDVIDdbldEJBtFhExQRMgERYRMSK4Iv5NeRxPmilZcYwECUjGfS8CD/0ETFeYmHL3is1SMDEmuCG871jozqpVVODziMU4q5nMRcoccZlaqzNRZnXilYmSIIkImyFxEmHAoRCgUJCiOUcLxfeGpvmCsPxwWbe+JiMaFRZyIDUdiMSHxXRxn5onGRNumYieRypsY5Csi+JSI+yLnDGlsWLaABUuXs3SXiSsjY7Ffue9Peq7ryduwgMULRf/qHWjrb/HXeyL66ems4dCObA41dtHzt4X6UzUYTC08EucJRs/laYm1GWro6jpNdnYxv2Qsl86bIGQqQhTu0fu0GlQU6nPQm80cMRah27ee1BNW2h/247xh5kzBKrINJRytrKQsP5NtJSYO/tH8VsSVZpotv3PcWIihupEbonh7nRc5cdiMJrcBl8g1KWKgIdamMeO4U4bqOw2afWUYq6reyTs68/rnEHmKeO7B57pEfsoySmuvYh/0E3jcSVetmvnpJ7l06yr1R/LRbt/F6ftDPHkewnfHiF6vZ33BKVy2clIW7aYgNxvN3p1k5h/HOhQhEBLnnp702US0G1F9r6WsrptuvxgTn9fxiGfT1zjHyFOEWF487xbc+DYx5vCHJrOtBNW8FaT8uJDFGzexvrSBh6MiTtSIj4oQOVSz5U1g8ZepCNfUzZuoux03IXYTqSvEhFx4K8IpJndyMt3xIsTyMk+DudJCdVkORRmp5DaFGXkm4gYuvy8ifuy0CKm8Vtf/TERohDH3dcpT51Pw21ma+3087bfRcXwN32bW0GC/zY3Kfegy11FqdzM6HsTTVMj+gwWkFdXijk7cT6XUNnXzoPcaFqOWVYvNXPtXFNznd6jXG9mTUsk5d4QnwQiee5UY83VTEstRfbOHwtNddPoiM/N2Po6JSwDJF3FqPz98vYQ16ZvZrFajjnJAz+4zjbRXbcGgXYc6K53NW7ezcZsWnaWbXu8Qg3druFy+lm07RL96Kz9v0pBjPsd5u23mU1NgkP7bdVRsXMvqogYae7txXDhG6do0lqzbLs5bRHH+brIy8mIibKWoFqWhzkhn5y71O3nFk5zUfcwByRUhlqC+1moMWVloBFnT5JVw4MI9fA9baDmrp1gr2vbqyT1qxemfehUixj7qqOakIYscjejXVXNeLB2+6CuOf25y9NebdPTFXnEEPH04LSZyTRZaRdugy0prtU7k0ggMVFSc4NixBs6eucR9Rxkpqi3k7VWjk8qbIJIrQm58ocIshSIinmkRk4VZEZE8QgGCTwbp6xtkWCxFiSrMUigiZIIiQiZ8sgi3283Y2JhCghgeHv607TTRzU8KiWdWEdEtly9fvpzcdqmQeGbdcqmQPBQRsmCC/wCg7FsMzA2ysQAAAABJRU5ErkJggg==" InformativeScreenshot="30a241aaa5fbaa101605184bbab9d45e.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Lookup" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <If Condition="[Double.Parse(row(&quot;Net&quot;).ToString) &gt; dLimit]" sap:VirtualizedContainerService.HintSize="704.8,1387.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[Double.Parse(row(&quot;Net&quot;).ToString) &gt; dLimit]" sap:VirtualizedContainerService.HintSize="582,1526" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="560.8,1236" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence sap:VirtualizedContainerService.HintSize="546,1337" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="sFirstName" />
                             <Variable x:TypeArguments="x:String" Name="sLastName" />
@@ -185,7 +217,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NGetText DisplayName="Get Text 'First Name'" sap:VirtualizedContainerService.HintSize="519.2,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                          <uix:NGetText DisplayName="Get Text 'First Name'" sap:VirtualizedContainerService.HintSize="484,167" sap2010:WorkflowViewState.IdRef="NGetText_1">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="128, 110, 407, 20" ElementType="InputBox" FriendlyName="'First Name'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_Firstname' /&gt;&lt;ctrl name='First Name' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_Firstname' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" ImageBase64="" InformativeScreenshot="c62727b2d64163bb3778d7c8b9972551.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="FuzzySelector" Text="First Name" TextMethod="FullTextScrapping" TextSelector="&lt;ctrl role='editable text' /&gt;">
                                 <uix:TargetAnchorable.Anchors>
@@ -199,7 +231,7 @@
                               <OutArgument x:TypeArguments="x:String">[sFirstName]</OutArgument>
                             </uix:NGetText.Text>
                           </uix:NGetText>
-                          <uix:NGetText DisplayName="Get Text 'Last Name'" sap:VirtualizedContainerService.HintSize="519.2,167.2" sap2010:WorkflowViewState.IdRef="NGetText_2">
+                          <uix:NGetText DisplayName="Get Text 'Last Name'" sap:VirtualizedContainerService.HintSize="484,167" sap2010:WorkflowViewState.IdRef="NGetText_2">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="128, 143, 407, 20" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_Lastname' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox1' /&gt;&lt;wnd ctrlname='txt_Lastname' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" ImageBase64="" InformativeScreenshot="5ffbe2acc224e1396887cbb8192544e9.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector">
                                 <uix:TargetAnchorable.Anchors>
@@ -213,10 +245,10 @@
                               <OutArgument x:TypeArguments="x:String">[sLastName]</OutArgument>
                             </uix:NGetText.Text>
                           </uix:NGetText>
-                          <ufa:FormActivity Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" FormTitle="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" DisableMaximizeButton="False" DisableMinimizeButton="False" DisplayName="Create Form" FormHeight="650" FormSchema="%[{&quot;label&quot;:&quot;First Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;firstName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Last Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;lastName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Category&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;category&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Net&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;net&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;VAT&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;vat&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Approve&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Decline&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;decline&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="550" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="519.2,212" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
+                          <ufa:FormActivity Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" FormTitle="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" DisableMaximizeButton="False" DisableMinimizeButton="False" DisplayName="Create Form" FormHeight="650" FormSchema="%[{&quot;label&quot;:&quot;First Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;firstName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Last Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;lastName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Category&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;category&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Net&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;net&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;VAT&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;vat&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Approve&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Decline&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;decline&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="550" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="484,232" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
                             <ufa:FormActivity.Body>
                               <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,85.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,27 +270,27 @@
                               <InArgument x:TypeArguments="x:String" x:Key="category">[row("Category").ToString]</InArgument>
                             </ufa:FormActivity.FormFieldsCollection>
                           </ufa:FormActivity>
-                          <If Condition="[selectedButton = &quot;decline&quot;]" sap:VirtualizedContainerService.HintSize="519.2,475.2" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[selectedButton = &quot;decline&quot;]" sap:VirtualizedContainerService.HintSize="484,536" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="375.2,324" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence sap:VirtualizedContainerService.HintSize="400,347" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="338,167" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="431, 610, 94, 29" ElementType="Button" FriendlyName="'Clear'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnClear' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnClear' check:text='Clear' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAAiaX7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAStSURBVGhD7ZbrU5RVHID7A5AZujhOzSilTY4pNUZqZDUKFIaRjiMp5hqlloKT6KQuWICi4A3H2HUHBMTEZRdZQBZdFYVdUVYWhMW9X1yW8oNNN/6Dp8MHnbIthxlYF3s/PF/O+V1mzvP+3nOeGh4eRuLxI4mIECQREYIkIkL4m4iffv4Deetdsht/lAgD3f5fQ4tw3/2NKUVentrlkggDmt57jxYRU+DmxRKJsWbKXvfoRGTV+3H6gxJjjLI9MDoRWxv8DA0NSYwxVSZJREQgiYgQJoSIgMvG7W4zXUYjRpMJo9mMxebE5XXhddqw9NjxBgYJhsidKEwIEb01JRSkzCcuKoqomBiiFiwgpaiCU/pamiqK+PCjUs5bXbhD5E4UIlrEoNdOz8lsZOu+Zk32UY6qNGjqatFUl5CTuh75pizk+/JZlHQAfb8LV4gaE4UIFuHHazNSuz6RdduPUKS10OsS64MBhuxdXFDW0HC8hCOHJRHjS2AAR9cpcpI+obi6lTZniJiBZnTH/yLC042lXYu2RoFCqUJxuomWmzasPhHrteG70cTZchXlCrGvqKSq1oChN4Df0Ymh9QINDQ1otVrKKw3c8IgP4eF+40jkinB1YtXnk7won+O6TgZCxTwQUSJE2Lh1pYzyvFSWLowldsYrxCatZk1pMxqzl4C1nduVG1kTN5O4WLE/9TVefy+Lz5UW+q8Us3F1JktS0li6bAVx8XIq+xxYQ/UcJ54QEfuFiCuotmRSmLcflcmOfaAHe9s+Nn62h29L9fQGAwT9btwOOw672L9Rx5lj35H0QRGt+gJkC1NZtWwnqoZrOJxe/IPBsL7CngwRiwvQXy4l6/144qfNYGZ8AglvzSfhjem8MOVtPs5SoOnuwdVRRvHmDaQlJ5Mwbw6z577DNFG/SfSRrcwhJ+8HOhy+f/YJA5Er4k4f9s4TbE5cy8EaAx3uEDH3RYjD1I8cZkIKye+mk5mbS+4DDqJS13FWV01ZRgbbsnezY8ducnPWIVuVzmyR2zySK8sn92AzPQ/3CBORK2LIh+f2Vao+XcyXu5UcbbUy4BHrwUExLbcwac5x6UwZytKRiShEL+6HrUvS2fzVAU5bPCJOvK7EVF1sNdJ+vZlzVXuRxaSRV9FO54APX1c9NcU7mCtEnJNE/DcBj42bygzSVmaTvq2ak40mTB1XMWmVyBetZbvsC7btuX9HtFP5TapYkyE/1CjiLmNqKmTDhmL2KE5Qf/oYm2LXs11loP6SCcOJQ8gzM3lWiNBJIh5BMMig38U1VSE7E99kzqRooqOfJjpqHolbvqeivhKNckTEyKvJge16AxW7lpP46iSin5lM9PyVZJSdR3fLj910gcYtK0ie/BzPizovT3+JWfOWSiJGg6//Jl2GFprUatTif69Wt2Do7KPfbsXWZ8Zw0YLDHyDgE0/OrjYMTSKuTou6pY2rfU7sd0amy4njutir11Iv6uh0OnFJX+KswYzNYaajw0yXxY4vRP9wMCFE/B+QREQIkogIQRIRIYxaxNT9bhYqvBJjzKzDntGJkBh//lVE8N7vZGqGWF4zKBEGjO5fQouQeHxIIiKCYf4E1HKQKq6UxpcAAAAASUVORK5CYII=" InformativeScreenshot="451106a1ac8de90f3762ab251033c27d.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Clear" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <ui:Continue sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                <ui:Continue sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Continue_1" />
                               </Sequence>
                             </If.Then>
                           </If>
                         </Sequence>
                       </If.Then>
                     </If>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Category'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[row(&quot;Category&quot;).ToString]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Category'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[row(&quot;Category&quot;).ToString]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="122, 386, 218, 19" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtCategory' /&gt;&lt;wnd cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtCategory' /&gt;&lt;wnd cls='Edit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN4AAAAXCAYAAABkgPHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABkSURBVHhe7dNBDQAgEMAw/Cd4QAjeDhfs0yaTsLX3nnOOpI+te+8AfxkPAsaDgPEgYDwIGA8CxoOA8SBgPAgYDwLGg4DxIGA8CBgPAsaDgPEgYDwIGA8CxoOA8SBgPAgYD76beWP/dCbFm7IAAAAAAElFTkSuQmCC" InformativeScreenshot="df311a896fb49701c401e0a992512f80.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -269,7 +301,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[DateTime.Parse(row(&quot;Date&quot;).ToString).ToString(&quot;yyyy-MM-dd&quot;)]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[DateTime.Parse(row(&quot;Date&quot;).ToString).ToString(&quot;yyyy-MM-dd&quot;)]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="119, 413, 125, 25" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtDate' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtDate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAdCAYAAACNBA9oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACoSURBVGhD7dIhDsQgFADRPTmVGEx1AwaDrETUVTXpFQhXgBP8/W7TVKyHecncYD6tNaG5YwL6TXBdl+ScaaJqrc8JvPfinJMQAg3etm1ijJH7vt8THMchGF/vXay1TDAzJgATgAmgmABMACaAYgIwAZgAignABGACKCYAE4AJoJgATAAmgGICMAH+TLCuq6SUaPBijLIsy3uC8zxl33eaqFLKcwKatSZfbfukbWUgeLIAAAAASUVORK5CYII=" InformativeScreenshot="dc735a2d67683a801b2781fc3f922ceb.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -280,7 +312,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Currency'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[row(&quot;Currency&quot;).ToString]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Currency'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[row(&quot;Currency&quot;).ToString]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="122, 449, 123, 19" ElementType="InputBox" FriendlyName="'Pounds Sterling'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtCurrency' /&gt;&lt;wnd cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtCurrency' /&gt;&lt;wnd cls='Edit' /&gt;" ImageBase64="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" InformativeScreenshot="67d5c95c1a9cf60ba73c8b2ee1d796a8.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Pounds Sterling" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;">
                           <uix:TargetAnchorable.Anchors>
@@ -291,7 +323,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Net'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[row(&quot;Net&quot;).ToString]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Net'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[row(&quot;Net&quot;).ToString]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="119, 479, 113, 25" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtValueNet' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtValueNet' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAdCAYAAACUoyOLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACrSURBVGhD7dGxDcQgEAXRKxzRBDGSXQHCMTkVELoAZ3SwFskl9l2+XzPSVPA+c05jrUEV/It6nqeNMdjpy++BmnO2EILFGNnZy235vaIex2HXdbGza62/UVtrRv5abqCKBapgoAoGqmCgCgaqYKAKBqpgoAoGqmCgCgaqYKAKBqpgoAoGqmCgCgaqYKAKBqpgf1G3bbPeOzt73/d31FKKpZTY6cvvgcoqT7sBQltUia4TagwAAAAASUVORK5CYII=" InformativeScreenshot="95adc50fe8323df294009c3fc3d0742a.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -302,7 +334,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'VAT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="704.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Text="[row(&quot;VAT&quot;).ToString]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'VAT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="582,227" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Text="[row(&quot;VAT&quot;).ToString]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="119, 511, 113, 25" ElementType="InputBox" FriendlyName="'Type'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtValueVAT' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='txtValueVAT' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAdCAYAAACUoyOLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACfSURBVGhD7dqxDQMhFARRd08FF5ITUgBIdEArdPAtfJITn5wzmpG2gpfua60VjjVRgRMVuC9q7z1KKe7Qbb8f1JxzXNcVtVZ32Lbb9ntEba2Fndd2ExWWqMBEBSYqMFGBiQpMVGCiAhMVmKjARAUmKjBRgYkKTFRgogITFZiowEQFJiowUYH9RU0pfe6G7qxtt0fUOWeMMdyh23635Yo3mClw3/YhUwkAAAAASUVORK5CYII=" InformativeScreenshot="cbfd135dca1e842ffcccbafb22f448cb.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Type" TextMethod="FullTextScrapping" TextSelector="&lt;wnd /&gt;">
                           <uix:TargetAnchorable.Anchors>
@@ -313,12 +345,12 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="704.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="582,167" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="119, 610, 94, 29" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnSubmit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnSubmit' check:text='Submit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAAiaX7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVlSURBVGhD7ZhrTxRXHIf7qi8aNNGkNlKjiWJimtZbUVKtghdivNRorbfG4KXewErFeisXtyqCaERRRBBFCrLAiorLyLKusCzDfYFlWdyVXXZhvwHf4OlBJbF2vbWiY5wXz4s58zuTk3nOmf8588nAwAAq7x9VhEJQRSgEVYRC+IcIr9eL1WpVeQc4nc4Xi+jo6ECv12M2m1WGkcrKSiwWy8tFVFdX4/f7VYaRpqYmVYQSUEUoBFWEQlBFKATliOj34uuxY5XrkGtrqa2vp7HdRnePn77+APkh+ty4nQ5ard24fX30B8p8AChHxKMGOsuPsHLCWL4MCiIoJITpm2JJ1/lxeQLkh+iq4M6VZJatTOdep4tHgTIfAAoR0YJclkH8nFXEpuaR9VcJJQVpnImPY/XcFLQ2F10B+wns5dzK0rAgMo0KkXMFyrwKsar81uukaLLJzMymtDSbmF+vY+4Wqy1QfhhQhohHBvRXNKycGkNOrYMOr2hzW2mpusPlkzpqnJ4Xz/S3IqIXf7eR0iIJfWkOBYPPW/w/nvcfUIYIpwkp7zhrF2zm0l0zDTY3nqHPUb8Pv0vGIJmpkTvpeb6t4jpFWQnMjzjMRW0+WddyyLxayA1DLe0i1/c4V0lZWZmY6flcys6h0NRAVWU5pYVFXLshYWjrpvdh3ZNc7glSf1vDV1OjOJgt8UDI8Dw71mFCIZ8mB80VGZxaMYntB5M5n62nokIU6xZRrN0u+urT2BWlIf50OdbBvM+Ff6gtXkNW5n7CZqxhXdRSZs76mvHT5jAvOpELbTYe1Z1i18atLF2+mhU/zmXipPHM2JHM7pitrFoUyfTwX9h2SY/twUl2RkWzcv53rAgdzWcjxxMceYwLUjOOf4337aMQEf30PWyhqzydlB0L+WZSMEFBk5mxSBRrWRRgyytEnIombPRC1p0to1xuo6E4meO/r2fCnnysVSfY9f1yNmxO4bLxPvU34lg0NpzdJ0vQVZVQlJHE4iXHkSo0REUd5fCheDLOH2FexDFKGu10vaOdmEJECHy9+JzttFoM3L19k9xzCcTG7mTmtizxGTnOlpeJuPAH4WGHyTV3YOv14W3WUnj2AGHLUjFKf7JlbRxxGi3mLplOfRKRs/dyurCG5van9WWBRqzAQRFPn/fR1ogAuLvuUnAunvlT9lJQnsSGl4l4vlgPFfBnX/BgX1EvOsV1pGjPuiVjD5T7mEV4OmXqHtwmt0p+PKN9g21OiZKLR1kSEkO+MVXM6ngOJuowiQNev9eJ6/5Rtv+c8OTFZSQQHnqUvHondp/o21hI/pl9fPtDGiaxIraqIl4PhyGTjKSfmLw9kWzDfYxiQFJpOgkJ0UxZdx7JriV5VSx7Np0h5XY9tdU1SFd2sHH1gScvLnU/c0ZtJvaqAZ1J9M3VkLg/imkHi2g3ihrxJiISj3ElJ4klYhd2VWwYWlweegOM+W2jCBH9vnZapAucWhNK8OejGTFyJCNCQpm15Rh5Dzy4vF4aL+9m68KJfDZiHGPGRLBh3XoWRAyJiCb005mEzR5N8DjRd9Jiwndnc9/poFcWu6Y3EZGWTtnNOPZNH8UXozZyqMBEXYAxv20UUiO89Do7aDPp0ZUWo9Vq0d4SW1hzM11P/zV5bBZqDbfEPZ04D0iYTNVUVootbmMTHa0WKopFXl+MTjfYt5J7Fhs94hzR39OKxdxEY2s3Hl+POC80UWUQfRw9eL3dODqaMIjrh6Ld/DjXhsMhU68vRVdsQrY538lvE8UW648NVYRCUEUoBFWEQlBFKITXEiFJEg0NDSrDiNFofLkIt9uNLMsq7wC73f5iESrvD1WEIhjgb2fNbUq5sUTBAAAAAElFTkSuQmCC" InformativeScreenshot="5abfb05219ba6d1211307488947ea36b.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Submit" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="704.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="582,167" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="431, 610, 94, 29" ElementType="Button" FriendlyName="'Clear'" FullSelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnClear' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='GroupBox2' /&gt;&lt;wnd ctrlname='btnClear' check:text='Clear' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAhCAYAAAAiaX7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASkSURBVGhD7ZrfT5NXGID3ByCJ+2GWLZlkusxsyhbH1DG3RYENh2MuRqY469jUTcFsaKYD3BCHgjoxDmrDDxEnForUIq1WQVpqpcUWaWtbCm0tJcYLEy/4D56dLtFsrnHbRfFj+y6em/O+57zJeb7znffiPDE5OYnM40cWIRFkERJBFiER/iTi3r17uFwunE6nzBRw586d+CLu3r2LwWCgp6cHs9kskyD6+vrQ6XSEw+FHi/B4PExMTMgkiJiA7u5uWcTjRhYhEWQREkEWIREkLyIS8HLzuh1bfz/9Fgv9djsO7wiBYIDgiBeH00cwMk40ztzphORFDLVUszd7MalJSSTNnEnSkiVkVzZwSt+KrqGSDz+q4YI7wGicudMJyYoYD/pwnixCsfEb1hcd5aiqnfa2VtqbqynO2UTJ1kJK9pezLPMgeleAQJw1phMSFREm6O2ndVMGG3ceoVLjYCggxscjTPhsXFS20Hm8miM/yyISS8SD33aK4sxPqWo20DsSJ8fThfb4H0SMXcdh0qBpqaNOqaLutI7uQS/ukMgNegkN6Dhbr6K+TsTrmjjRasQ4FCHst2I0XKSzsxONRkN9k5GBMfEhPFwvwUhTRMCKW19O1rJyjmuteOLlPBBRLUR4uXGllvqyHFYuTSFl7sukZK5jfU0X7fYgEbeJm01bWJ86j9QUEX/hNV5/r5AvlA5cV6rYsq6AFdm5rFy1mtS0EpqG/bjj1Uwg/wERB4SIK6i2F1BRdgCVxYfP48TXu58tn+/jhxo9Q9EI0fAoo34ffp+ID7Rx5tiPZH5QiUG/F8XSHNau2o2q8yr+kSDh8eiUd2HTX8Tyveh7aih8P4202XOZl5ZO+luLSX9jDs8/+zYfF9bRft1JwFxL1bbN5GZlkb5oAfMXvsNssb5O1FGsKaa47FfM/tBf60wR0hRxaxiftZFtGRs41GLEPBon574IsZn62GamZ5P1bh4FpaWUPuAQKnUbZ7XN1Obns6NoD7t27aG0eCOKtXnMF3O7YnMV5ZQe6sL5cI0pRJoiJkKM3ezjxGfL+WqPkqMGN54xMR4dF6flBpb281w+U4uyJnYiKtCL++HbFXls+/ogpx1jIk90V+JUXTL0Y7rWxfkTP6GYmUtZgwmrJ0TI1kFL1S4WChHnZRGPJjLmZVCZT+6aIvJ2NHPynAWLuQ+LRknJsg3sVHzJjn337wgTTd/liDEFJYfPibweLLoKNm+uYl9dIx2nj7E1ZRM7VUY6LlswNh6mpKCAp4UIrSzib4hGGQ8HuKqqYHfGmyyYkUxy8pMkJy0iY/svNHQ00a6MiYh1TX681zpp+P4TMl6dQfJTs0hevIb82gtob4TxWS5ybvtqsmY9w3NinZfmvMgri1bKIv4NIdcgNmM3OrUatfjfq9XdGK3DuHxuvMN2jJcc+MMRIiHRctp6MepEXpsGdXcvfcMj+G7FTtcI/msi1qGhQ6yj1WrFJX2Zs0Y7Xr8ds9mOzeEjFKf+VCF5Ef8XZBESQRYhEWQREkEWIRH+sQiTycTAwIBMgrBarY9+1xR76Tc4OPh7okziuX37dnwRMo8PWYQkmOQ38GbBEEqBkmIAAAAASUVORK5CYII=" InformativeScreenshot="5b6135fbb98f1727fc3336a293c99f27.png" ScopeSelectorArgument="&lt;wnd app='expenses.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Clear" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                       </uix:NClick.Target>
